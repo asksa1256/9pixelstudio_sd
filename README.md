@@ -1,1 +1,1 @@
-- 9pixelstudio �ڵ��Դϴ�.
+- 9pixelstudio 코드입니다.

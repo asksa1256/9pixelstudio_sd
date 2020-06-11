@@ -1,1 +1,1 @@
-- 9pixelstudio 코드입니다.
+- 9pixelstudio 전체 페이지 코드입니다.

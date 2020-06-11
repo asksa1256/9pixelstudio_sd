@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9pixelstudio - works</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet">
+<link href=css/style.css type="text/css" rel="stylesheet">
+<link rel="shortcut icon" href="img/favicon.ico">
+<link rel="icon" href="img/favicon.ico">
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<style>
+    header
+    {    
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+    }
+
+    
+    #buttons
+    {
+        overflow: hidden;
+        background-color: #fff;
+        float: left;
+        padding: 0;
+        position: relative;
+    }
+    #buttons li
+    {
+        float: left;
+        font-family: 'Poppins';
+        width: 130px;
+        text-align: justify;
+    }
+    #buttons li a:hover
+    {
+        font-weight: 700;
+    }
+    .logo
+    {
+        position: relative;
+        width: 170px;
+    }
+    .ham
+    {
+        position: relative;
+        top: 2.5%;
+    }
+    
+    
+    
+    /*filter*/
+    #buttons li.active
+    {
+        font-weight: 700;
+    }
+    .items
+    {
+        position: relative;
+        font-family: 'Poppins', 'Noto Sans KR';
+        display: flex;
+        flex-flow: wrap;
+        width: 1600px;
+        justify-content: space-between;
+    }
+    .filter-btn-m
+    {
+        display: none;
+    }
+    
+    
+    
+    /*media query*/
+    @media (max-width:1200px)
+    {
+        .container
+        {
+            width: 100%;
+            padding: 30px;
+            columns: 1;
+        }
+        
+        
+        
+    }
+    
+
+    
+    @media (max-width:767px)
+    {   
+        .container
+        {
+            width: 100%;
+            padding: 30px;
+        }
+        
+        
+        /* menu */
+        .menu
+        {
+            width: 100%;
+            clip-path: none;
+            z-index: 99999;
+        }
+        .menu-ul
+        {
+            line-height: 10vh;
+            margin-top: 25vh;
+            margin-left: -7%;
+        }
+        
+        
+        /* filter */
+        .filter-btn
+        {
+            display: none;
+        }
+        .filter-btn-m
+        {
+            display: block;
+            position: absolute;
+            z-index: 9999;
+            top: 0px;
+        }
+        .filter-btn-m ul
+        {
+            padding: 0px;
+        }
+        .filter-btn-m li
+        {
+            text-align: left;
+        }
+        #buttons-m li.active
+        {
+            font-weight: 700;
+        }
+
+        
+        
+        /* portfolio */
+        .portfolio
+        {
+            position: relative;
+            font-family: 'Poppins', 'Noto Sans KR';
+            display: flex;
+            flex-flow: column;
+            width: 100%;
+            padding-top: 100px;
+        }
+        .box
+        {
+            width: 85vw;
+            cursor: pointer;
+            margin-bottom: 40px;
+        }
+        .items
+        {
+            width: 100%;
+        }
+        
+        
+        
+        
+        /* footer */
+        footer p
+        {
+            font-weight: 700;
+            font-size: 1.8em;
+            line-height: normal;
+        }
+    }
+</style>
+</head>
+
+
+<body>
+
+<!-- header -->
+<header>
+    <div class="logo" data-aos="fade-down">
+        <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+    </div>
+    
+    
+    <!-- filter -->
+    <div class="filter-btn">
+        <ul id="buttons">
+            <li class="active" data-target="all"><a href="#">all</a></li>
+            <li data-target="website"><a href="#">Website</a></li>
+            <li data-target="graphic"><a href="#">Graphic Design</a></li>
+        </ul>
+    </div>
+    <!-- filter end -->
+
+    
+    <div class="ham" data-aos="fade-down">
+        <img src="img/menu.png" alt="menu">
+    </div>
+    
+    <div class="menu">
+       <img src="img/menu.png" alt="menu">
+        <ul class="menu-ul">
+            <li><a href="#"><span>Work</span></a></li>
+            <li><a href="about.html"><span>About</span></a></li>
+            <li><a href="contact.html"><span>Contact</span></a></li>
+            <li><a href="#"><span>KOR</span></a></li>
+            <li><a href="#"><span>ENG</span></a></li>
+        </ul>
+    </div>
+</header>
+<!-- header end -->
+
+
+
+
+
+<!-- portfolio -->
+<div class="container portfolio">
+ 
+  <!-- filter-mobile -->
+    <div class="filter-btn-m">
+        <ul id="buttons-m">
+            <li class="active" data-target="all"><a href="#">all</a></li>
+            <li data-target="website"><a href="#">Website</a></li>
+            <li data-target="graphic"><a href="#">Graphic Design</a></li>
+        </ul>
+    </div>
+    <!-- filter-mobile end -->
+    
+  
+   <div class="items">
+    <div class="box" data-id="graphic">
+        <figure>
+            <img src="img/portfolio/design4.jpg">
+            <figcaption>
+                <h2>제주천연염색</h2>
+                <p>Graphic Design</p>
+            </figcaption>
+        </figure>
+    </div>
+    
+    <div class="box" data-id="website">
+        <figure>
+            <img src="img/portfolio/site14.jpg">
+            <figcaption>
+                <h2>Senop</h2>
+                <p>Website</p>
+            </figcaption>
+        </figure>
+    </div>
+    
+    <div class="box" data-id="website">
+        <figure>
+            <img src="img/portfolio/site7.jpg">
+            <figcaption>
+                <h2>에이마트</h2>
+                <p>Website</p>
+            </figcaption>
+        </figure>
+    </div>
+    
+    <div class="box" data-id="graphic">
+        <figure>
+            <img src="img/portfolio/design2.jpg">
+            <figcaption>
+                <h2>제주뷰티센터</h2>
+                <p>Graphic Design</p>
+            </figcaption>
+        </figure>
+    </div>
+    
+    <div class="box" data-id="website">
+        <figure>
+            <img src="img/portfolio/site8.jpg">
+            <figcaption>
+                <h2>스마트북스</h2>
+                <p>Website</p>
+            </figcaption>
+        </figure>
+    </div>
+    
+    <div class="box" data-id="website">
+        <figure>
+            <img src="img/portfolio/site4.jpg">
+            <figcaption>
+                <h2>BORACAY</h2>
+                <p>Website</p>
+            </figcaption>
+        </figure>
+    </div>
+    
+    <div class="box" data-id="website">
+        <figure>
+            <img src="img/portfolio/site3.jpg">
+            <figcaption>
+                <h2>Asiana Hotel</h2>
+                <p>Website</p>
+            </figcaption>
+        </figure>
+    </div>
+    
+    <div class="box" data-id="website">
+        <figure>
+            <img src="img/portfolio/site5.jpg">
+            <figcaption>
+                <h2>Sobahn</h2>
+                <p>Website</p>
+            </figcaption>
+        </figure>
+    </div>
+
+    <div class="box" data-id="website">
+        <figure>
+            <img src="img/portfolio/site2.jpg">
+            <figcaption>
+                <h2>sinsiway</h2>
+                <p>Website</p>
+            </figcaption>
+        </figure>
+    </div>
+    
+    <div class="box" data-id="graphic">
+        <figure>
+            <img src="img/portfolio/design3.jpg">
+            <figcaption>
+                <h2>SAENGEOL</h2>
+                <p>Graphic Design</p>
+            </figcaption>
+        </figure>
+    </div>
+    
+    <div class="box" data-id="website">
+        <figure>
+            <img src="img/portfolio/site6.jpg">
+            <figcaption>
+                <h2>Sea World</h2>
+                <p>Website</p>
+            </figcaption>
+        </figure>
+    </div>
+    
+    <div class="box" data-id="website">
+        <figure>
+            <img src="img/portfolio/site1.jpg">
+            <figcaption>
+                <h2>JPITA</h2>
+                <p>Website</p>
+            </figcaption>
+        </figure>
+    </div>
+    
+    </div><!-- items end -->
+</div>
+<!-- portfolio end -->
+
+
+
+
+
+<!-- footer -->
+
+<footer>
+    <div class="container">
+        <p>9pixelstudio</p>
+        <p>제주특별자치도 제주시 수덕로 44 206-602</p>
+        <p>+82 10 1234 5678</p>
+        <br>
+        <p>Tel. 123 4567 8901</p>
+        <p>E-mail. 9pixelstudio.gmail.com</p>
+        
+        <div class="footer-right">
+            <div class="f-icon">
+                <ul>
+                    <li>
+                    <a href="#"><img src="img/f-icon-1.jpg"
+                    onmouseover="this.src='img/f-icon-1-1.jpg'"
+                    onmouseout="this.src='img/f-icon-1.jpg'" alt="map"></a>
+                    </li>
+                    <li><a href="#"><img src="img/f-icon-2.jpg"
+                    onmouseover="this.src='img/f-icon-2-2.jpg'"
+                    onmouseout="this.src='img/f-icon-2.jpg'" alt="message"></a>
+                    </li>
+                    <li><a href="#"><img src="img/f-icon-3.jpg"
+                    onmouseover="this.src='img/f-icon-3-2.jpg'"
+                    onmouseout="this.src='img/f-icon-3.jpg'" alt="phone"></a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="clear"></div>
+
+            <div class="copyright">
+                <p>ⓒ 9pixelstudio. all rights reserved.</p>
+            </div>
+        </div>
+    </div>
+    
+</footer>
+
+
+<!-- top -->
+<div class="top">
+    <a href="#"><img src="img/down-chevron.png" alt="top"></a>
+</div>
+<!-- top end -->
+
+
+
+<script>
+AOS.init({
+    offset: 400,
+    duration: 1000
+});    
+    
+    
+$(".ham").click(function(){
+    $(".menu").show("slide",{direction:"right"},500,null);
+    $(".ham").css({'transform':'translateY(-60px)'});
+});
+$(".menu img").click(function(){
+    $(".menu").hide("slide",{direction:"right"},500,null);
+    $(".ham").css({'transform':'translateY(0px)'});
+}); 
+    
+    
+    
+/*category*/
+    const buttons=document.querySelector('#buttons').children;
+    const items=document.querySelector('.items').children;
+    
+    for(let i=0; i<buttons.length; i++){
+        buttons[i].addEventListener('click',function(){
+            
+            for(let j=0; j<buttons.length; j++){
+                buttons[j].classList.remove('active')
+            }
+            this.classList.add('active')
+            const target=this.getAttribute('data-target');
+            for(let k=0; k<items.length; k++){
+                items[k].style.display="none";
+                
+                if(items[k].getAttribute('data-id')==target){
+                    items[k].style.display='block';
+                }
+                if(target=='all'){
+                    items[k].style.display='block';
+                }
+            }
+        })
+    }
+    
+    
+/*category-m*/
+    const buttonsm=document.querySelector('#buttons-m').children;
+    const itemsm=document.querySelector('.items').children;
+    
+    for(let i=0; i<buttonsm.length; i++){
+        buttonsm[i].addEventListener('click',function(){
+            
+            for(let j=0; j<buttonsm.length; j++){
+                buttonsm[j].classList.remove('active')
+            }
+            this.classList.add('active')
+            const target=this.getAttribute('data-target');
+            for(let k=0; k<itemsm.length; k++){
+                itemsm[k].style.display="none";
+                
+                if(itemsm[k].getAttribute('data-id')==target){
+                    itemsm[k].style.display='block';
+                }
+                if(target=='all'){
+                    itemsm[k].style.display='block';
+                }
+            }
+        })
+    }
+
+</script>
+</body>
+</html>

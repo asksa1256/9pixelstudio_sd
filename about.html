@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9pixelstudio - about</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet">
+<link href=css/style.css type="text/css" rel="stylesheet">
+<link rel="shortcut icon" href="img/favicon.ico">
+<link rel="icon" href="img/favicon.ico">
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<style>
+    header
+    {    
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+    }
+    .logo
+    {
+        position: relative;
+        width: 170px;
+    }
+    .ham
+    {
+        position: relative;
+        top: 2.5%;
+    }
+    
+    
+    
+    
+    /*about*/
+    .banner
+    {
+        background:url(img/about-banner.jpg) no-repeat center fixed;
+        padding: 150px 0;
+        text-align: center;
+        background-size: cover;
+    }
+    .banner p
+    {
+        font-size: 2em;
+        font-weight: 700;
+        text-align: center;
+        padding: 0 40px;
+    }
+    
+    
+    .about-text,
+    .service-text,
+    .partners-text
+    {
+        font-size: 2.5em;
+        font-family: 'Poppins';
+        font-weight: 700;
+        padding-bottom: 30px;
+        margin-bottom: 40px;
+        border-bottom: 1px solid #000;
+    }
+    .about-left
+    {
+        width: 27%;
+        overflow: hidden;
+        float: left;
+    }
+    .about-left img
+    {
+        width: 100%;
+    }
+    .about-right
+    {
+        width: 55%;
+        float: right;
+        font-size: 1.05em;
+        text-align: justify;
+        margin-top: -20px;
+        line-height: 30px;
+    }
+    
+    
+    .service-section
+    {
+        margin-top: 150px;
+    }
+    .service
+    {
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+    .service .box
+    {
+        width: 30%;
+        text-align: center;
+        font-family: 'Poppins';
+        cursor: auto;
+    }
+    .service .box img
+    {
+        width: 100%;
+        height: 300px;
+    }
+    .service .box h3
+    {
+        margin-bottom: -20px;
+        margin-top: 30px;
+        font-size: 1.8em;
+        font-weight: 700;
+    }
+    .service .box p
+    {
+        padding: 30px 0;
+        font-weight: 700;
+        font-size: 1.2em;
+    }
+    
+    
+    .partners-section
+    {
+        margin-top: 80px;
+        padding-bottom: 40px;
+        border-bottom: 1px solid #000;
+    }
+    
+    /* sprite */
+    .sprite
+    {
+        width:976px; margin:0 auto;
+        padding: 0;
+    }
+    .sprite ul
+    {
+        overflow:hidden;
+        padding: 0;
+    }
+    .sprite ul li
+    {
+        float:left;
+        text-indent:-9999px;
+    }
+    .sprite ul li a
+    {
+        display:block;
+        width:244px;
+        height:75px;
+        box-sizing:border-box; background:url(img/sprite.png) no-repeat; 
+        border-right:0;
+        transition:all 0.3s;
+    }
+
+    .sprite ul li:nth-child(1) a
+    {
+        background-position:0 0;
+    }
+    .sprite ul li:nth-child(2) a
+    {
+        background-position:0 -75px;
+    }
+    .sprite ul li:nth-child(3) a
+    {
+        background-position:0 -150px;
+    }
+    .sprite ul li:nth-child(4) a
+    {
+        background-position:0 -225px;
+    }
+    .sprite ul li:nth-child(5) a
+    {
+        background-position:0 -300px;
+    }
+    .sprite ul li:nth-child(6) a
+    {
+        background-position:0 -375px;
+    }
+    .sprite ul li:nth-child(7) a
+    {
+        background-position:0 -450px;
+    }
+    .sprite ul li:nth-child(8) a
+    {
+        background-position:0 -525px;
+    }
+
+    /* sprite hover */
+    .sprite ul li:nth-child(1) a:hover
+    {
+        background-position:-244px 0;
+    }
+    .sprite ul li:nth-child(2) a:hover
+    {
+        background-position:-244px -75px;
+    }
+    .sprite ul li:nth-child(3) a:hover
+    {
+        background-position:-244px -150px;
+    }
+    .sprite ul li:nth-child(4) a:hover
+    {
+        background-position:-244px -225px;
+    }
+    .sprite ul li:nth-child(5) a:hover
+    {
+        background-position:-244px -300px;
+    }
+    .sprite ul li:nth-child(6) a:hover
+    {
+        background-position:-244px -375px;
+    }
+    .sprite ul li:nth-child(7) a:hover
+    {
+        background-position:-244px -450px;
+    }
+    .sprite ul li:nth-child(8) a:hover
+    {
+        background-position:-244px -525px;
+    }
+    
+    
+    
+    
+    
+    /*media query*/
+    @media (max-width:1200px)
+    {
+        .container
+        {
+            width: 100%;
+            padding: 30px;
+            columns: 1;
+        }
+        
+        .about-left
+        {
+            width: 100%;
+            overflow: hidden;
+            float: none;
+            display: flex;
+            justify-content: center;
+        }
+        .about-left img
+        {
+            width: 50%;
+        }
+        .about-right
+        {
+            width: 100%;
+            float: none;
+            font-size: 18px;
+            text-align: justify;
+            margin-top: 40px;
+            line-height: 29px;
+        }
+        
+    }
+    
+
+    
+    @media (max-width:767px)
+    {   
+        .container
+        {
+            width: 100%;
+            padding: 30px;
+        }
+        
+        
+        /* menu */
+        .menu
+        {
+            width: 100%;
+            clip-path: none;
+            z-index: 99999;
+        }
+        .menu-ul
+        {
+            line-height: 10vh;
+            margin-top: 25vh;
+            margin-left: -7%;
+        }
+        
+        
+        /* about */
+        .about-left
+        {
+            width: 100%;
+            overflow: hidden;
+            float: none;
+        }
+        .about-left img
+        {
+            width: 100%;
+        }
+        .about-right
+        {
+            width: 100%;
+            float: none;
+            font-size: 18px;
+            text-align: justify;
+            margin-top: 40px;
+            line-height: 29px;
+        }
+        
+        
+        /* service*/
+        .service
+        {
+            overflow: hidden;
+            display: block;
+            position: relative;
+        }
+        .service .box
+        {
+            width: 100%;
+            text-align: center;
+            font-family: 'Poppins';
+            cursor: auto;
+        }
+        
+
+        /* partners */
+        .partners
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 25%;
+        }
+        .sprite ul li a
+        {
+            display:block;
+            width:244px;
+            height:75px;
+            box-sizing:border-box; background:url(img/sprite.png) no-repeat; 
+            border-right:0;
+            transition:all 0.3s;
+        }
+        
+        
+        /* footer */
+        footer p
+        {
+            font-weight: 700;
+            font-size: 1.8em;
+            line-height: normal;
+        }
+    }
+</style>
+</head>
+
+
+<body>
+
+<!-- header -->
+<header>
+    <div class="logo" data-aos="fade-down">
+        <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+    </div> 
+    
+    <div class="ham" data-aos="fade-down">
+        <img src="img/menu.png" alt="menu">
+    </div>
+    
+    <div class="menu">
+       <img src="img/menu.png" alt="menu">
+        <ul class="menu-ul">
+            <li><a href="work.html"><span>Work</span></a></li>
+            <li><a href="#"><span>About</span></a></li>
+            <li><a href="contact.html"><span>Contact</span></a></li>
+            <li><a href="#"><span>KOR</span></a></li>
+            <li><a href="#"><span>ENG</span></a></li>
+        </ul>
+    </div>
+</header>
+<!-- header end -->
+
+
+
+
+
+<!-- about page -->
+    <div class="banner">
+        <p>두산 그룹 웹 사이트 부터 시작하여<br> 두산베어스, 국제유도연맹 및 대형 게임 사이트, 쇼핑몰 등<br> 50여개가 넘는 다양한 사이트를 작업해 왔으며 풍부한 실무 경험을 갖추고 있습니다.</p>
+    </div>
+    
+<div class="container">
+   <div class="about-section">
+    <p class="about-text">About</p>
+    
+    <div class="about-left">
+        <img src="img/about1%20(1).jpg" alt="">
+    </div>
+    
+    <div class="about-right">
+        <p>
+            9pixelstudio 대표 양용석은 1995년 국내 최초 ISP 인터피아 웹마스터로써 인터피아 웹사이트 기획/제작/유지보수를 담당했었으며, 두산그룹 웹사이트 기획/개발/유지보수, 두산계열사 웹마스터 교육 담당, 국제 유도 연맹 웹사이트 기획/개발, 두산그룹 두산타워 , 두산베어스, 오비맥주, 국제유도 연맹 웹사이트 기획/개발/유지보수 및 쌍용아파트 웹사이트 기획했으며, 2000년부터 온라인 이벤트 사이트 유텐드 웹사이트 기획/개발/마케팅 한국 본부장을 역임하였습니다.<br><br>2002년 부터는 게임 사이트인 라그하임 웹사이트 기획/개발하였으며, 2004년부터는 한우리 독서 운동 본부 사이트 리뉴얼, 면세점 할인 쿠폰 사이트기획 및 설계했습니다. 2005년에는 제주로 내려와 온라인 영어 평가 시스템 이모코디설계 개발 기획 총괄을 담당했으며, 또한 두바이 5성급 호텔인 아시아나 호텔, 경제전문 출판사 스마트북스 웹 사이트, DB 보안전문회사 ㈜신시웨이 웹 사이트, (사) 제주관광문화산업진흥원 웹사이트 개발 등 웹 사이트 제작 및 부속되는 그래픽 디자인 작업 등을 병행했습니다. 지금까지 총 4권의 책을 출간하여, HTML5와 CSS3에 대한 해박한 지식을 보유하고 있습니다.
+        </p>
+    </div>
+   </div><!-- about-section end --> 
+    </div>    
+    
+    
+    <div class="clear"></div>
+    
+ 
+   <div class="container">
+   <div class="service-section">
+    <p class="service-text">Service</p>
+
+    <div class="service">
+        <div class="box">
+            <img src="img/about1.jpg" alt="">
+            <h3>Web Design</h3>
+            <p>
+                HTML5 &amp; CSS3<br>
+                Wordpress<br>
+                Shopping mall
+            </p>
+        </div>
+        
+        <div class="box">
+            <img src="img/about2.jpg" alt="">
+            <h3>Graphic Design</h3>
+            <p>
+                Photoshop<br>
+                Illustrator
+            </p>
+        </div>
+        
+        <div class="box">
+            <img src="img/about3.jpg" alt="">
+            <h3>Book Design</h3>
+            <p>
+                Leaflet<br>
+                Book<br>
+                Presentation
+            </p>
+        </div>
+    </div>
+   </div><!-- service-section end -->
+   </div>
+   
+   
+   <div class="container">
+   <div class="partners-section">
+    <p class="partners-text">Partners</p>
+
+    <div class="partners">
+        <div class="sprite">
+            <ul>
+                <li><a href="#">대한지적공사</a></li>
+                <li><a href="#">incomms</a></li>
+                <li><a href="#">에너지관리공단</a></li>
+                <li><a href="#">한국전력공사</a></li>
+                <li><a href="#">KBS</a></li>
+                <li><a href="#">GDC</a></li>
+                <li><a href="#">Kwater</a></li>
+                <li><a href="#">강원고용노동지청</a></li>
+            </ul>
+        </div><!-- sprite end -->
+    </div>
+   </div><!-- partner-section end -->    
+</div>
+<!-- about page end -->
+
+
+
+<div class="clear"></div>
+
+
+
+<!-- footer -->
+
+<footer>
+    <div class="container">
+        <p>9pixelstudio</p>
+        <p>제주특별자치도 제주시 수덕로 44 206-602</p>
+        <p>+82 10 1234 5678</p>
+        <br>
+        <p>Tel. 123 4567 8901</p>
+        <p>E-mail. 9pixelstudio.gmail.com</p>
+        
+        <div class="footer-right">
+            <div class="f-icon">
+                <ul>
+                    <li>
+                    <a href="#"><img src="img/f-icon-1.jpg"
+                    onmouseover="this.src='img/f-icon-1-1.jpg'"
+                    onmouseout="this.src='img/f-icon-1.jpg'" alt="map"></a>
+                    </li>
+                    <li><a href="#"><img src="img/f-icon-2.jpg"
+                    onmouseover="this.src='img/f-icon-2-2.jpg'"
+                    onmouseout="this.src='img/f-icon-2.jpg'" alt="message"></a>
+                    </li>
+                    <li><a href="#"><img src="img/f-icon-3.jpg"
+                    onmouseover="this.src='img/f-icon-3-2.jpg'"
+                    onmouseout="this.src='img/f-icon-3.jpg'" alt="phone"></a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="clear"></div>
+
+            <div class="copyright">
+                <p>ⓒ 9pixelstudio. all rights reserved.</p>
+            </div>
+        </div>
+    </div>
+    
+</footer>
+
+
+<!-- top -->
+<div class="top">
+    <a href="#"><img src="img/down-chevron.png" alt="top"></a>
+</div>
+<!-- top end -->
+
+
+
+<script>
+AOS.init({
+    offset: 400,
+    duration: 1000
+});    
+    
+    
+$(".ham").click(function(){
+    $(".menu").show("slide",{direction:"right"},500,null);
+    $(".ham").css({'transform':'translateY(-60px)'});
+});
+$(".menu img").click(function(){
+    $(".menu").hide("slide",{direction:"right"},500,null);
+    $(".ham").css({'transform':'translateY(0px)'});
+}); 
+    
+
+
+</script>
+</body>
+</html>

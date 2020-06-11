@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9pixelstudio - contact</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<link href="css/bootstrap.css" type="text/css" rel=stylesheet>
+<link href=css/style.css type="text/css" rel="stylesheet">
+<link rel="shortcut icon" href="img/favicon.ico">
+<link rel="icon" href="img/favicon.ico">
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<style>
+    header
+    {    
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+    }
+    .logo
+    {
+        position: relative;
+        width: 170px;
+    }
+    .ham
+    {
+        position: relative;
+        top: 2.5%;
+    }
+    
+    
+    
+    
+    /*about*/
+    .banner
+    {
+        background:url(img/contact.jpg) no-repeat center fixed;
+        padding: 150px 0;
+        text-align: center;
+        background-size: cover;
+    }
+    .banner p
+    {
+        font-size: 2em;
+        font-weight: 700;
+        text-align: center;
+        padding: 0 40px;
+        color: #fff;
+    }
+    
+    
+    .contact-text
+    {
+        font-size: 2.5em;
+        font-family: 'Poppins';
+        font-weight: 700;
+        padding-bottom: 30px;
+        margin-bottom: 40px;
+        border-bottom: 1px solid #000;
+    }
+    .location-text
+    {
+        font-size: 2.5em;
+        font-family: 'Poppins';
+        font-weight: 700;
+        padding-bottom: 30px;
+        margin-bottom: 0px;
+    }
+    .input-area
+    {
+        float: left;
+        border-bottom: 1px solid #000;
+        padding: 20px 0;
+        font-size: 1.3em;
+        overflow: hidden;
+    }
+    .labels
+    {
+        display: inline;
+        margin-right: 10px;
+        font-family: 'Poppins', 'Noto Sans KR';
+        font-size: 1.2em;
+    }
+    .input-area input
+    {
+        border: none;
+        font-size: 1em;
+        font-family: 'Poppins', 'Noto Sans KR';
+        width: 100%;
+        margin-top: 10px;
+        outline: none;
+    }
+    
+    
+    .checkbox-section
+    {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 30px;
+    }
+    input[type="checkbox"]
+    {
+        position: relative;
+        top: 0px;
+        left: 30px;
+        width: 25px;
+        height: 25px;
+        -webkit-appearance: none;
+        outline: none;
+        transition: 0.5s;
+        display: block;
+    }
+    input[type="checkbox"]:before
+    {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #262626;
+        box-sizing: border-box;
+        transition: 0.5s;
+    }
+    input:checked[type="checkbox"]:before
+    {
+        background: #000;
+    }
+    .checkbox label
+    {
+        font-size: 1.5em;
+        font-family: 'Poppins';
+        margin-left: 25px;
+    }
+    .contact-box
+    {
+        position: relative;
+        width: 30%;
+        border: 1px solid #000;
+        display: flex;
+        justify-content: center;
+    }
+    
+    
+    .detail-section
+    {
+        border-bottom: 1px solid #000;
+    }
+    textarea
+    {
+        border: none;
+        width: 100%;
+        outline: none;
+        font-size: 1.5em;
+        overflow: auto;
+        resize: none;
+    }
+    textarea::placeholder
+    {
+        font-size: 1.3em;
+    }
+    
+    
+    /* loacation */
+    iframe
+    {
+        width: 100%;
+        height: 600px;
+        border: none;
+    }
+    
+    
+    
+    /*media query*/
+    @media (max-width:1200px)
+    {
+        .container
+        {
+            width: 100%;
+            padding: 30px;
+            columns: 1;
+        }   
+    }
+    
+
+    
+    @media (max-width:767px)
+    {   
+        .container
+        {
+            width: 100%;
+            padding: 30px;
+        }
+        
+        
+        /* menu */
+        .menu
+        {
+            width: 100%;
+            clip-path: none;
+            z-index: 99999;
+        }
+        .menu-ul
+        {
+            line-height: 10vh;
+            margin-top: 25vh;
+            margin-left: -7%;
+        }
+        
+        
+        /* checkbox */
+        .checkbox-section
+        {
+            display: block;
+            justify-content: flex-start;
+            margin-top: 30px;
+        }
+        .checkbox label
+        {
+            font-size: 1.5em;
+            font-family: 'Poppins';
+            margin-left: 25px;
+        }
+        .contact-box
+        {
+            position: relative;
+            width: 100%;
+            border: 1px solid #000;
+            text-align: left;
+            margin: 30px auto;
+        }
+        
+        
+        /* footer */
+        footer p
+        {
+            font-weight: 700;
+            font-size: 1.8em;
+            line-height: normal;
+        }
+    }
+</style>
+</head>
+
+
+<body>
+
+<!-- header -->
+<header>
+    <div class="logo" data-aos="fade-down">
+        <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+    </div> 
+    
+    <div class="ham" data-aos="fade-down">
+        <img src="img/menu.png" alt="menu">
+    </div>
+    
+    <div class="menu">
+       <img src="img/menu.png" alt="menu">
+        <ul class="menu-ul">
+            <li><a href="work.html"><span>Work</span></a></li>
+            <li><a href="about.html"><span>About</span></a></li>
+            <li><a href="#"><span>Contact</span></a></li>
+            <li><a href="#"><span>KOR</span></a></li>
+            <li><a href="#"><span>ENG</span></a></li>
+        </ul>
+    </div>
+</header>
+<!-- header end -->
+
+
+
+
+
+<!-- about page -->
+    <div class="banner">
+        <p>
+           사이트 제작 문의 및 웹 표준 교육에 관한 질문을 보내주세요.
+        </p>
+    </div>
+    
+<div class="container">
+    <div class="input-section">
+        <p class="contact-text">Contact</p>
+        
+        <div class="input-box">
+            <div class="input-area col-xs-12 col-sm-6">
+               <label class="labels">Company</label>
+                <input type="text" name="company" placeholder="회사명">
+            </div>
+            
+            <div class="input-area col-xs-12 col-sm-6">                  
+                <label class="labels">Department</label>
+                <input type="text" name="department" placeholder="부서">
+            </div>
+                
+            <div class="input-area col-xs-12 col-sm-6">
+                <label class="labels">Tel</label>
+                <input type="text" name="telephone" placeholder="전화번호">
+            </div>
+               
+            <div class="input-area col-xs-12 col-sm-6">
+                <label class="labels">E-mail</label>
+                <input type="text" name="email" placeholder="이메일">
+            </div>
+               
+            <div class="input-area col-xs-12 col-sm-6">
+                <label class="labels">Name</label>
+                <input type="text" name="client" placeholder="성명">
+            </div>
+               
+            <div class="input-area col-xs-12 col-sm-6">
+                <label class="labels">Job Position</label>
+                <input type="text" name="job_position" placeholder="직책">
+            </div>
+               
+            <div class="input-area col-xs-12 col-sm-6">
+                <label class="labels">Mobile</label>
+                <input type="text" name="mobile" placeholder="휴대폰번호">
+            </div>
+               
+            <div class="input-area col-xs-12 col-sm-6">
+                <label class="labels">Fax</label>
+                <input type="text" name="faxnum" placeholder="팩스번호">
+            </div> 
+        </div><!-- input-box end --> 
+    </div>
+</div>
+<!-- input-section end --> 
+       
+                  
+        
+        
+<div class="container">
+   <div class="checkbox-section">      
+        <div class="contact-box">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="web_design">
+                    Web Design
+                </label>
+            </div>
+         </div>
+         
+        <div class="contact-box">     
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="graphic_design">
+                    Graphic Design
+                </label>
+            </div>
+       </div>
+           
+        <div class="contact-box">           
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="book_design">
+                    Book Design
+                </label>
+            </div>
+       </div>
+    </div>
+</div>
+<!-- checkbox-section end --> 
+
+
+
+<div class="container">
+   <p class="contact-text">Detail</p>
+   <div class="detail-section">      
+        <textarea cols="50" rows="10" placeholder="Comment" required
+        ></textarea>
+    </div>
+</div>
+<!-- detail-section end -->
+
+
+<div class="container">
+    <p class="location-text">Location</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.534077711452!2d126.4691500154468!3d33.48747925472642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x350cfa57ca382883%3A0x979d6b8a9f8b2515!2s44%20Sudeong-ro%2C%20Nohyeong-dong%2C%20Cheju%2C%20Jeju-do!5e0!3m2!1sen!2skr!4v1589102471769!5m2!1sen!2skr" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</div>
+<!-- map end -->
+<!-- contact end -->
+
+
+
+<div class="clear"></div>
+
+
+
+<!-- footer -->
+
+<footer>
+    <div class="container">
+        <p>9pixelstudio</p>
+        <p>제주특별자치도 제주시 수덕로 44 206-602</p>
+        <p>+82 10 1234 5678</p>
+        <br>
+        <p>Tel. 123 4567 8901</p>
+        <p>E-mail. 9pixelstudio.gmail.com</p>
+        
+        <div class="footer-right">
+            <div class="f-icon">
+                <ul>
+                    <li>
+                    <a href="#"><img src="img/f-icon-1.jpg"
+                    onmouseover="this.src='img/f-icon-1-1.jpg'"
+                    onmouseout="this.src='img/f-icon-1.jpg'" alt="map"></a>
+                    </li>
+                    <li><a href="#"><img src="img/f-icon-2.jpg"
+                    onmouseover="this.src='img/f-icon-2-2.jpg'"
+                    onmouseout="this.src='img/f-icon-2.jpg'" alt="message"></a>
+                    </li>
+                    <li><a href="#"><img src="img/f-icon-3.jpg"
+                    onmouseover="this.src='img/f-icon-3-2.jpg'"
+                    onmouseout="this.src='img/f-icon-3.jpg'" alt="phone"></a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="clear"></div>
+
+            <div class="copyright">
+                <p>ⓒ 9pixelstudio. all rights reserved.</p>
+            </div>
+        </div>
+    </div>
+    
+</footer>
+
+
+<!-- top -->
+<div class="top">
+    <a href="#"><img src="img/down-chevron.png" alt="top"></a>
+</div>
+<!-- top end -->
+
+
+
+<script>
+AOS.init({
+    offset: 400,
+    duration: 1000
+});    
+    
+    
+$(".ham").click(function(){
+    $(".menu").show("slide",{direction:"right"},500,null);
+    $(".ham").css({'transform':'translateY(-60px)'});
+});
+$(".menu img").click(function(){
+    $(".menu").hide("slide",{direction:"right"},500,null);
+    $(".ham").css({'transform':'translateY(0px)'});
+}); 
+    
+
+
+</script>
+</body>
+</html>
